@@ -26,3 +26,26 @@ console.log(whereAmI.nextElementSibling);
 
 // Agora acesse o terceiroFilho a partir de pai .
 console.log(fatherWhererAmI.lastElementChild.previousElementSibling);
+
+// Crie um filho para elementoOndeVoceEsta .
+newSon = document.createElement('div');
+newSon.innerText = 'Meu novo filho';
+whereAmI.appendChild(newSon);
+newSon.id = 'novoFilho';
+
+// Crie um irmão para elementoOndeVoceEsta .
+let newBrother = document.createElement('ul');
+newBrother.innerText = 'Nova Lista irmão';
+newBrother.id = 'lista-irmao';
+let theFather = document.querySelector('#pai');
+theFather.appendChild(newBrother);
+
+// Crie um filho para primeiroFilhoDoFilho.
+let sonOfTheSon = document.querySelector('#primeiroFilhoDoFilho');
+let oneMoreSOn = document.createElement('div');
+oneMoreSOn.id = 'mais um filho';
+sonOfTheSon.appendChild(oneMoreSOn);
+
+// A partir desse filho criado, acesse terceiroFilho .
+console.log(oneMoreSOn.parentElement.parentElement.nextElementSibling);
+
