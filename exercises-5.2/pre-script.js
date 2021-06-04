@@ -49,3 +49,15 @@ sonOfTheSon.appendChild(oneMoreSOn);
 // A partir desse filho criado, acesse terceiroFilho .
 console.log(oneMoreSOn.parentElement.parentElement.nextElementSibling);
 
+// Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+
+for (let index = fatherWhererAmI.children.length - 1; index >= 0; index -= 1) {
+    let currentChildren = fatherWhererAmI.children[index];
+    if (currentChildren.id !== 'elementoOndeVoceEsta') {
+        currentChildren.remove();
+    }
+}
+
+let secondSon = document.querySelector('#segundoEUltimoFilhoDoFilho');
+secondSon.remove();
+newSon.remove();
