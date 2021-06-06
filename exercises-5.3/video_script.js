@@ -3,6 +3,7 @@ const divDois = document.getElementById('divDois');
 const divTres = document.getElementById('divTres');
 const input = document.getElementById('input');
 const myWebpage = document.getElementById('mySpotrybefy');
+const techElement = document.querySelector('.tech');
 
 function changeTech(evento) {
   const techElement = document.querySelector('.tech');
@@ -29,7 +30,14 @@ function outColor(evento) {
 }
 
 myWebpage.addEventListener('mouseover', changeColor);
-myWebpage.addEventListener('mouseout', outColor); 
+myWebpage.addEventListener('mouseout', outColor);
+
+function listenInput(evento) {
+  const techElement = document.querySelector('.tech');
+  techElement.innerText = evento.target.value;
+}
+
+input.addEventListener('input', listenInput);
 
 
 
