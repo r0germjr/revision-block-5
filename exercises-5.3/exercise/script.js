@@ -52,3 +52,19 @@ function daysCalendary() {
 }
 
 daysCalendary();
+
+//Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
+//Adicione a este botão a ID "btn-holiday" .
+//Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
+
+function createButtonHoliday(buttonName) {
+    let buttonContainner = document.querySelector('.buttons-container');
+    let newButton = document.createElement('button');
+    let newButtonID = 'btn-holiday';
+
+    newButton.id = newButtonID;
+    newButton.innerHTML = buttonName;
+    buttonContainner.appendChild(newButton);
+}
+
+createButtonHoliday('Feriados');
